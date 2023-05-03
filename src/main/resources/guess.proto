@@ -1,0 +1,16 @@
+syntax="proto3";
+
+option java_package="ma.enset.stubs";
+
+service GuessGame{
+  rpc guess (Request) returns (stream Response);
+}
+
+message Request{
+  string nickName = 1;
+  int32 numberGuessed = 2;
+}
+
+message Response{
+  string message = 1;
+}
